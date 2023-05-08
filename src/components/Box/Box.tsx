@@ -8,6 +8,7 @@ interface BoxProps {
   children?: React.ReactNode;
   styleSheet?: StyleSheet;
 }
+
 export default function Box({ styleSheet, children, tag, ...props }: BoxProps) {
   const Tag = tag || 'div';
   return (
