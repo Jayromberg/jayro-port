@@ -14,7 +14,9 @@ export default function HomeScreen() {
       <Menu />
       <Feed>
         <Feed.Header />
-        <Text>
+        <Text
+          variant="display1"
+        >
           Últimas Atualizações
         </Text>
         <Feed.Posts />
