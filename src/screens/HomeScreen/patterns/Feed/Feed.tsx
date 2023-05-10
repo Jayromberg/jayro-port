@@ -22,6 +22,9 @@ Feed.Header = () => {
     <Box>
       <Icon name='github' />
       <Icon name='default_icon' />
+      <Icon name='linkedin'/>
+      <Icon name='clock_fill'/>
+      <Icon name='menu'/>
       <Text>
         Feed Header
       </Text>
