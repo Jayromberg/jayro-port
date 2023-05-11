@@ -3,6 +3,7 @@ import Box from "@src/components/Box/Box";
 import Text from "@src/components/Text/Text";
 import Icon from '@src/components/Icon/Icon';
 import Image from '@src/components/Image/Image';
+import Link from '@src/components/Link/Link';
 
 interface FeedProps {
   children: React.ReactNode;
@@ -28,10 +29,15 @@ Feed.Header = () => {
           borderRadius: '100%',
         }}
         src="https://github.com/Jayromberg.png"
-        alt="Imagem de perfil do Mario Souto"
+        alt="Imagem de perfil do Jayromberg Lima Santos"
       />
+      <Link href="https://www.linkedin.com/in/jayromberg-lima-santos/">
+        <Icon name="linkedin" />
+      </Link>
+      <Link href='/sobre'>
+        Sobre
+      </Link>
       <Icon name='github' />
-      <Icon name='linkedin'/>
       <Text>
         Feed Header
       </Text>
