@@ -2,6 +2,7 @@ import React from 'react';
 import Box from "@src/components/Box/Box";
 import Text from "@src/components/Text/Text";
 import Icon from '@src/components/Icon/Icon';
+import Image from '@src/components/Image/Image';
 
 interface FeedProps {
   children: React.ReactNode;
@@ -20,11 +21,17 @@ export default function Feed({ children }: FeedProps) {
 Feed.Header = () => {
   return (
     <Box>
+      <Image
+        styleSheet={{
+          width: '128px',
+          height: '128px',
+          borderRadius: '100%',
+        }}
+        src="https://github.com/Jayromberg.png"
+        alt="Imagem de perfil do Mario Souto"
+      />
       <Icon name='github' />
-      <Icon name='default_icon' />
       <Icon name='linkedin'/>
-      <Icon name='clock_fill'/>
-      <Icon name='menu'/>
       <Text>
         Feed Header
       </Text>
