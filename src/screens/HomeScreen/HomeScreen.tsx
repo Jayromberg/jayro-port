@@ -15,7 +15,7 @@ export default function HomeScreen() {
       <Feed>
         <Feed.Header />
         <Text
-          variant="display1"
+          variant='display1'
         >
           Últimas Atualizações
         </Text>
