@@ -5,7 +5,7 @@ import { useTheme } from "@src/theme/ThemeProvider";
 import React from 'react';
 
 interface TextProps {
-  variant: ThemeTypographyVariants;
+  variant?: ThemeTypographyVariants;
   tag?: 'p' | 'li' | 'h1' | 'h2' | 'h2' | string;
   children?: React.ReactNode;
   styleSheet?: StyleSheet;
@@ -18,7 +18,7 @@ const Text = React.forwardRef(({
   ...props
 }: TextProps, ref) => {
   const theme = useTheme();
-  const textVariant = theme.typography.variants[variant];
+  const textVariant = theme.typography.variants[variant || 'body2'];
 
   return (
     <BaseComponent

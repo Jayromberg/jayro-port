@@ -10,8 +10,8 @@ interface LinkProps {
   href: string;
   children: React.ReactNode;
   styleSheet?: StyleSheet;
-  variant: ThemeTypographyVariants;
-  colorVariant: ThemeColorVariant;
+  variant?: ThemeTypographyVariants;
+  colorVariant?: ThemeColorVariant;
   colorVariantEnabled?: boolean;
 }
 
@@ -27,12 +27,12 @@ const Link = React.forwardRef(({
   const isIExternalLink = href.startsWith('http');
 
   const currentColorSet = {
-    color: theme.colors[colorVariant].x500,
+    color: theme.colors[colorVariant || 'primary'].x500,
     hover: {
-      color: theme.colors[colorVariant].x400,
+      color: theme.colors[colorVariant || 'primary'].x400,
     },
     focus: {
-      color: theme.colors[colorVariant].x600,
+      color: theme.colors[colorVariant || 'primary'].x600,
     }
   };
 
@@ -64,22 +64,18 @@ const Link = React.forwardRef(({
   }
 
   if(isIExternalLink) return (
-    <>
-      <Text 
-        {...{
-          target: '_blank',
-          ...linkProps,
-        }}
-      />
-    </>
+    <Text 
+      {...{
+        target: '_blank',
+        ...linkProps,
+      }}
+    />
   )
 
   return (
-    <>
-      <NextLink href={href} passHref>
-        <Text {...linkProps} />
-      </NextLink>
-    </>
+    <NextLink href={href} legacyBehavior passHref>
+      <Text {...linkProps} />
+    </NextLink>
   )
 });
 
