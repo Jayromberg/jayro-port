@@ -19,17 +19,17 @@ export default function HomeScreen() {
       }}
     >
       <Background />
+      <Footer />
       {/* <Menu /> */}
-      <Feed>
-        {/* <Feed.Header /> */}
-        {/* <Text
+      {/* <Feed>
+        <Feed.Header />
+        <Text
           variant='display1'
         >
           Últimas Atualizações
-        </Text> */}
-        {/* <Feed.Posts /> */}
-      </Feed>
-      {/* <Footer /> */}
+        </Text>
+        <Feed.Posts />
+      </Feed> */}
     </Box>
   )
 }
