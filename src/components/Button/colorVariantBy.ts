@@ -42,7 +42,6 @@ function createVariant(theme: Theme, colorVariant: ColorVariant) {
 
 export function colorVariantBy(theme: Theme, colorVariant: ColorVariant, variant: Variant) {
   const styles = {
-    // [primary]
     primary: createVariant(theme, 'primary'),
     accent: createVariant(theme, 'accent'),
     positive: createVariant(theme, 'positive'),
