@@ -12,7 +12,7 @@ interface CurrentRef {
   current: HTMLElement | null
 }
 
-interface ButtonBase {
+export interface ButtonBaseProps {
   href?: string;
   children: React.ReactNode;
   textVariant?: ThemeTypographyVariants;
@@ -25,13 +25,13 @@ export default function ButtonBase({
   styleSheet,
   href,
   ...props
-}: ButtonBase) {
+}: ButtonBaseProps) {
   const router = useRouter();
-  const ref = React.useRef();
+  const ref = React.useRef() as unknown as CurrentRef;
   const isLink = Boolean(href);
   const Tag = isLink ? 'a' : 'button';
   
-  useRipple(ref as unknown as CurrentRef, {
+  useRipple(ref, {
     animationLength: 600,
     rippleColor: 'rgba(255,255,255,0.7)',
   });
