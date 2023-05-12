@@ -1,11 +1,11 @@
 import React from 'react';
+import { useTheme } from "@src/theme/ThemeProvider";
 import Box from "@src/components/Box/Box";
 import Text from "@src/components/Text/Text";
-import Icon from '@src/components/Icon/Icon';
+// import Icon from '@src/components/Icon/Icon';
 import Image from '@src/components/Image/Image';
-import Link from '@src/components/Link/Link';
+// import Link from '@src/components/Link/Link';
 import Button from '@src/components/Button/Button';
-import { useTheme } from "@src/theme/ThemeProvider";
 
 interface FeedProps {
   children: React.ReactNode;
