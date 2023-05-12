@@ -19,6 +19,9 @@ export default function HomeScreen() {
       }}
     >
       <Background />
+      <Feed>
+        <Feed.Header />
+      </Feed>
       <Footer />
       {/* <Menu /> */}
       {/* <Feed>
