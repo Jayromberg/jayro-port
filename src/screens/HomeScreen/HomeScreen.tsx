@@ -18,12 +18,12 @@ export default function HomeScreen() {
         alignItems: 'center',
       }}
     >
+      <Menu />
       <Background />
       <Feed>
         <Feed.Header />
       </Feed>
       <Footer />
-      {/* <Menu /> */}
       {/* <Feed>
         <Feed.Header />
         <Text
