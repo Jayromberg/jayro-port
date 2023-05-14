@@ -33,11 +33,11 @@ Feed.Header = () => {
   const theme = useTheme();
   return (
     <Box
-    styleSheet={{
-      borderBottom: `1px solid ${theme.colors.neutral.x200}`,
-      paddingBottom: '24px',
-      marginBottom: '24px',
-    }}
+      styleSheet={{
+        borderBottom: `1px solid ${theme.colors.neutral.x200}`,
+        paddingBottom: '24px',
+        marginBottom: '24px',
+      }}
     >
       <Box
         styleSheet={{

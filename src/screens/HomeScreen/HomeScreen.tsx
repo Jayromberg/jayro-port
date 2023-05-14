@@ -19,11 +19,12 @@ export default function HomeScreen() {
       }}
     >
       <Menu />
-      <Background />
+      {/* <Background /> */}
+      {/* <Menu />
       <Feed>
         <Feed.Header />
       </Feed>
-      <Footer />
+      <Footer /> */}
       {/* <Feed>
         <Feed.Header />
         <Text
