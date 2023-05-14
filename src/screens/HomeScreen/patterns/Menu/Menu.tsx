@@ -1,12 +1,16 @@
+import { useState } from 'react' 
 import Box from "@src/components/Box/Box";
 import Button from "@src/components/Button/Button";
 import Icon from "@src/components/Icon/Icon";
 import Text from "@src/components/Text/Text";
 import { useTheme } from "@src/theme/ThemeProvider";
+import NavBar from "./NavBar";
 
 export default function Menu() {
   const theme = useTheme();
   const baseSize = '40px';
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <Box
       styleSheet={{
@@ -42,6 +46,7 @@ export default function Menu() {
       </Button.Base>
 
       <Button.Base
+        onClick={() => setIsOpen(!isOpen)}
         styleSheet={{
           width: baseSize,
           height: baseSize,
@@ -57,7 +62,10 @@ export default function Menu() {
           },
         }}
       >
-        <Icon name="menu" />
+        <Icon name="menu"/>
+        <NavBar styleSheet={{
+          display: isOpen ? 'flex' : 'none',
+        }}/>
       </Button.Base>
     </Box>
   )
